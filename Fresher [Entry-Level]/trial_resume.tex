@@ -1,0 +1,278 @@
+%====================================================
+%   TRIAL / EXAMPLE RESUME — Alex Morgan
+%   This is a DEMO with placeholder data, not a real
+%   person. Compile this file as-is to see what the
+%   Resume Builder Prompt produces before running the
+%   interactive prompt yourself.
+%
+%   Compiler   : pdfLaTeX
+%   Recommended: Overleaf > New Project > Upload > Compile
+%====================================================
+
+\documentclass[11pt, a4paper]{article}
+
+% ---- Encoding & Font (Helvetica/Arial — top ATS font) --------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[scaled=0.95]{helvet}   % Helvetica = Arial equivalent
+\renewcommand{\familydefault}{\sfdefault}
+
+% ---- Layout --------------------------------------------------------
+\usepackage[
+  top    = 0.55in,
+  bottom = 0.50in,
+  left   = 0.60in,
+  right  = 0.60in
+]{geometry}
+
+% ---- Colors (before hyperref) -------------------------------------
+\usepackage[dvipsnames]{xcolor}
+\definecolor{linkblue}{RGB}{26, 115, 200}
+\definecolor{headingcolor}{RGB}{15, 15, 15}
+
+% ---- Hyperlinks ---------------------------------------------------
+\usepackage[
+  colorlinks  = true,
+  urlcolor    = linkblue,
+  linkcolor   = linkblue,
+  pdfencoding = auto
+]{hyperref}
+
+% ---- Other packages -----------------------------------------------
+\usepackage{fontawesome5}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{microtype}
+\usepackage{fancyhdr}
+
+% ---- ATS: glyph-to-unicode map ------------------------------------
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+% ---- Page style ---------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{15pt}
+\pagenumbering{gobble}
+
+% ---- Global resets ------------------------------------------------
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{4pt}
+\raggedbottom
+\raggedright
+
+% ---- Section headings — ALL CAPS, 12pt bold, ruled ---------------
+\titleformat{\section}
+  {\large\bfseries\color{headingcolor}\MakeUppercase}
+  {}{0pt}{}
+  [\vspace{1pt}\hrule]
+\titlespacing*{\section}{0pt}{8pt}{5pt}
+
+% ---- Outer list (one item per project) -----------------------------
+\newcommand{\outerListStart}{%
+  \begin{itemize}[
+    leftmargin = 0pt,
+    label      = {},
+    itemsep    = 6pt,
+    parsep     = 0pt,
+    topsep     = 2pt,
+    listparindent = 0pt
+  ]%
+}
+\newcommand{\outerListEnd}{\end{itemize}}
+
+% ---- Bullet list ----------------------------------------------------
+\newcommand{\bulletListStart}{%
+  \begin{itemize}[
+    leftmargin = 14pt,
+    label      = {\small\textbullet},
+    itemsep    = 0pt,
+    parsep     = 0pt,
+    topsep     = 3pt,
+    partopsep  = 0pt
+  ]%
+}
+\newcommand{\bulletListEnd}{\end{itemize}}
+
+\newcommand{\bitem}[1]{\item \small #1}
+
+% ---- Project block — atomic via minipage, never splits across a
+%      page break; heading (#1 name, #2 subtitle, #3 URL, #4 label)
+%      opens the block, bullets go in between, then close it -------
+\newcommand{\projectBlockStart}[4]{%
+  \item\begin{minipage}[t]{\linewidth}
+  \begin{tabularx}{\linewidth}{@{}X r@{}}
+    \textbf{#1}\enspace{\small\textit{#2}} &
+    {\small\faGithub\enspace\href{#3}{#4}}
+  \end{tabularx}\vspace{-1pt}%
+}
+\newcommand{\projectBlockEnd}{\end{minipage}\vspace{6pt}}
+
+% ---- Education heading ---------------------------------------------
+\newcommand{\educationHeading}[4]{%
+  \item
+  \begin{tabularx}{\linewidth}{@{}X r@{}}
+    \textbf{#1} & \small #2 \\
+    \small\textit{#3} &
+    \ifx\relax#4\relax\else\small\textit{#4}\fi
+  \end{tabularx}%
+  \vspace{-2pt}%
+}
+
+%====================================================
+\begin{document}
+
+%====================================================
+%  HEADER
+%====================================================
+\begin{center}
+  {\fontsize{20}{24}\selectfont\bfseries ALEX MORGAN}\\[6pt]
+  \faPhone\enspace\href{tel:+15551234567}{+1-5551234567}
+  \;\textbar\;
+  \faEnvelope\enspace
+  \href{mailto:alex.morgan@example.com}{\color{linkblue}alex.morgan@example.com}
+  \;\textbar\;
+  \faLinkedin\enspace
+  \href{https://linkedin.com/in/alexmorgan}{\color{linkblue}LinkedIn}
+  \;\textbar\;
+  \faGithub\enspace
+  \href{https://github.com/alexmorgan}{\color{linkblue}GitHub}
+  \;\textbar\;
+  \faGlobe\enspace
+  \href{https://alexmorgan.dev}{\color{linkblue}Portfolio}
+\end{center}
+
+\vspace{-2pt}
+
+%====================================================
+%  SUMMARY
+%====================================================
+\section{Summary}
+
+\normalsize
+Computer Science graduate (2026) who likes building things that
+work end to end. Spent the last year deep in \textbf{React},
+\textbf{Node.js}, and \textbf{PostgreSQL} — from database schema
+to shipped UI. Built a job-tracking app now used by 40+ students
+in my program, and a small API wrapper published on PyPI.
+Comfortable with \textbf{REST APIs}, \textbf{Git} workflows, and
+picking up new tools quickly. Looking for an entry-level
+\textbf{Software Engineer} or \textbf{Full-Stack Developer} role.
+
+\vspace{2pt}
+
+%====================================================
+%  SKILLS
+%====================================================
+\section{Skills}
+
+\vspace{3pt}
+\normalsize
+\begin{itemize}[
+  leftmargin = 0pt,
+  label      = {},
+  itemsep    = 3pt,
+  parsep     = 0pt,
+  topsep     = 0pt
+]
+  \item \textbf{Languages:} JavaScript, TypeScript, Python, SQL
+  \item \textbf{Frontend:} React, Next.js, HTML5, CSS3, Tailwind CSS
+  \item \textbf{Backend:} Node.js, Express, Flask, REST APIs
+  \item \textbf{Databases:} PostgreSQL, MongoDB
+  \item \textbf{Tools:} Git, GitHub, Docker, VS Code, Postman
+  \item \textbf{Testing:} Jest, Pytest
+\end{itemize}
+
+%====================================================
+%  PROJECTS
+%====================================================
+\section{Projects}
+
+\outerListStart
+
+  %--- Project 1 ---
+  \projectBlockStart
+    {Job Tracker}
+    {\textbar\ Application Tracking Web App \textbar\ React, Node.js, PostgreSQL}
+    {https://github.com/alexmorgan/job-tracker}
+    {GitHub}
+  \bulletListStart
+    \bitem{Built a full-stack \textbf{job application tracker} used by \textbf{40+ students} in my program.}
+    \bitem{Designed a \textbf{PostgreSQL} schema with status history, tags, and follow-up reminders.}
+    \bitem{Implemented \textbf{JWT authentication} and per-user data isolation on the backend.}
+    \bitem{Built a responsive \textbf{React} dashboard with filtering, sorting, and inline editing.}
+    \bitem{Deployed the app on \textbf{Render} with automatic deploys from the main branch.}
+  \bulletListEnd
+  \projectBlockEnd
+
+  %--- Project 2 ---
+  \projectBlockStart
+    {Weather CLI}
+    {\textbar\ Command-Line Weather Tool \textbar\ Python, REST API}
+    {https://github.com/alexmorgan/weather-cli}
+    {GitHub}
+  \bulletListStart
+    \bitem{Built a \textbf{Python CLI} tool that fetches and formats weather data from a public REST API.}
+    \bitem{Published the package to \textbf{PyPI}, reaching 150+ downloads in the first two months.}
+    \bitem{Added local caching to cut redundant API calls by roughly \textbf{60\%}.}
+    \bitem{Wrote a full \textbf{Pytest} suite covering API failures, bad input, and edge cases.}
+  \bulletListEnd
+  \projectBlockEnd
+
+  %--- Project 3 ---
+  \projectBlockStart
+    {Study Group Finder}
+    {\textbar\ Real-Time Matching Tool \textbar\ Next.js, MongoDB, WebSocket}
+    {https://github.com/alexmorgan/study-finder}
+    {GitHub}
+  \bulletListStart
+    \bitem{Built a \textbf{Next.js} app matching students into study groups by course and schedule.}
+    \bitem{Used \textbf{WebSocket} connections for live group-chat updates without page refresh.}
+    \bitem{Modeled flexible group/availability data in \textbf{MongoDB} with compound indexes.}
+    \bitem{Ran a small pilot with 25 classmates and iterated on matching logic from real feedback.}
+  \bulletListEnd
+  \projectBlockEnd
+
+\outerListEnd
+
+%====================================================
+%  EDUCATION
+%====================================================
+\section{Education}
+
+\outerListStart
+  \educationHeading
+    {State University, Springfield}
+    {2022 -- 2026}
+    {Bachelor of Science --- Computer Science}
+    {\relax}
+\outerListEnd
+
+%====================================================
+%  CERTIFICATIONS
+%====================================================
+\section{Certifications}
+
+\vspace{3pt}
+\normalsize
+\begin{itemize}[
+  leftmargin = 14pt,
+  label      = {\small\textbullet},
+  itemsep    = 3pt,
+  parsep     = 0pt,
+  topsep     = 2pt
+]
+  \item \small JavaScript Algorithms and Data Structures \textemdash\ freeCodeCamp
+  \hspace{6pt}\href{https://example.com/verify-1}{\color{linkblue}Verify Certificate}
+
+  \item \small Responsive Web Design \textemdash\ freeCodeCamp
+  \hspace{6pt}\href{https://example.com/verify-2}{\color{linkblue}Verify Certificate}
+\end{itemize}
+
+%====================================================
+\end{document}
