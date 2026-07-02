@@ -43,7 +43,7 @@ at a blank page wondering where to even start.
 
 ## Quick Start
 
-1. Open **[`resume_builder_prompt.md`](resume_builder_prompt.md)**
+1. Open **[`resume_builder_prompt.md`](Fresher%20%5BEntry-Level%5D/resume_builder_prompt.md)**
 2. Copy everything inside the code block
 3. Paste it into a new chat with Claude
 4. Answer the questions as they come — or paste an old resume /
@@ -57,12 +57,12 @@ No LaTeX installed locally? You don't need it — Overleaf compiles
 in the browser.
 
 ## What's Inside
-
 | File | What it is |
 |---|---|
-| [`resume_builder_prompt.md`](resume_builder_prompt.md) | The actual prompt. Paste this into Claude to start. |
-| [`trial_resume.tex`](trial_resume.tex) | A fully filled-in example resume (placeholder person) so you can see the output *before* running the prompt yourself. |
-| [`trial_resume.pdf`](trial_resume.pdf) | The compiled version of the above — open it directly to see what the finished product looks like. |
+| [`resume_builder_prompt.md`](Fresher%20%5BEntry-Level%5D/resume_builder_prompt.md) | The actual prompt. Paste this into Claude to start. |
+| [`trial_resume.tex`](Fresher%20%5BEntry-Level%5D/trial_resume.tex) | A fully filled-in example resume (placeholder person) so you can see what the inputs look like. |
+| [`trial_resume.pdf`](Fresher%20%5BEntry-Level%5D/trial_resume.pdf) | The compiled version of the above — open it directly to see what the final product looks like. |
+
 
 ## Features
 
