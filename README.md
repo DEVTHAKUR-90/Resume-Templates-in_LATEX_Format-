@@ -43,7 +43,7 @@ at a blank page wondering where to even start.
 
 ## Quick Start
 
-1. Open **[`resume_builder_prompt.md`](templates/resume_builder_prompt.md)**
+1. Open **[`resume_builder_prompt.md`](Templates/resume_builder_prompt.md)**
 2. Copy everything inside the code block
 3. Paste it into a new chat with Claude
 4. Answer the questions as they come — or paste an old resume /
@@ -59,9 +59,9 @@ in the browser.
 ## What's Inside
 | File | What it is |
 |---|---|
-| [`resume_builder_prompt.md`](templates/resume_builder_prompt.md) | The actual prompt. Paste this into Claude to start. |
-| [`trial_resume.tex`](templates/trial_resume.tex) | A fully filled-in example resume (placeholder person) so you can see what the inputs look like. |
-| [`trial_resume.pdf`](templates/trial_resume.pdf) | The compiled version of the above — open it directly to see what the final product looks like. |
+| [`resume_builder_prompt.md`](Templates/resume_builder_prompt.md) | The actual prompt. Paste this into Claude to start. |
+| [`trial_resume.tex`](Templates/trial_resume.tex) | A fully filled-in example resume (placeholder person) so you can see what the inputs look like. |
+| [`trial_resume.pdf`](Templates/trial_resume.pdf) | The compiled version of the above — open it directly to see what the final product looks like. |
 
 
 ## Features
@@ -113,7 +113,7 @@ instead of choking on a fancy template.
 ## Preview
 
 Want to see the output before committing to the full interview?
-Open **[`trial_resume.pdf`](templates/trial_resume.pdf)** — it's a complete,
+Open **[`trial_resume.pdf`](Templates/trial_resume.pdf)** — it's a complete,
 compiled example built from the same template the prompt generates,
 using placeholder data for a fictional candidate.
 
